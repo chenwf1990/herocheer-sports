@@ -1,0 +1,37 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:8066/herocheer-order?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    host: localhost
+    database: 3
+    port: 6379
+    password: chenwf
+    timeout: 5000ms
+dubbo:
+  application:
+    name: herocheer-order-provider
+  scan:
+    base-packages: com.herocheer.order.service
+  protocol:
+    id: dubbo
+    name: dubbo
+    port: 17003
+  provider:
+    timeout: 60000 #超时时间ms
+    retries: 0     #远程服务调用重试次数, 不包括第一次调用, 不需要重试请设为0
+    filter: -exception #服务提供方远程调用过程拦截器名称, 多个名称用逗号分隔
+  consumer:
+    timeout: 60000 #超时时间ms
+    retries: 0     #远程服务调用重试次数, 不包括第一次调用, 不需要重试请设为0
+    check: false  #是否检查
+  service:
+    loadbalance: roundrobin #负载均衡： 轮询
+  registry:
+    address: zookeeper://localhost:2181 #注册中心
+
+
+
+

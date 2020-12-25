@@ -1,9 +1,9 @@
 server:
-  port: 18081
+  port: 18083
   servlet:
-    context-path: /uac
+    context-path: /order
 spring:
   profiles:
     active: cwf
   application:
-    name: herocheer-uac-web
+    name: herocheer-order-web

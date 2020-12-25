@@ -3,14 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>herocheer-parent</artifactId>
+        <artifactId>herocheer-order</artifactId>
         <groupId>com.herocheer</groupId>
         <version>0.0.1</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.herocheer</groupId>
-    <artifactId>herocheer-uac-web</artifactId>
+    <artifactId>herocheer-order-web</artifactId>
 
     <dependencies>
         <dependency>
@@ -25,7 +25,7 @@
 
         <dependency>
             <groupId>com.herocheer</groupId>
-            <artifactId>herocheer-uac-api</artifactId>
+            <artifactId>herocheer-order-api</artifactId>
             <version>0.0.1</version>
         </dependency>
 

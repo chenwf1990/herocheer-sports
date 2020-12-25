@@ -3,26 +3,20 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>herocheer-parent</artifactId>
+        <artifactId>herocheer-order</artifactId>
         <groupId>com.herocheer</groupId>
         <version>0.0.1</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.herocheer</groupId>
-    <artifactId>herocheer-uac-api</artifactId>
+    <artifactId>herocheer-order-provider</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>com.herocheer</groupId>
-            <artifactId>herocheer-common</artifactId>
+            <artifactId>herocheer-dubbo</artifactId>
             <version>0.0.1</version>
-        </dependency>
-
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>2.9.2</version>
         </dependency>
 
         <dependency>
@@ -30,5 +24,20 @@
             <artifactId>herocheer-order-api</artifactId>
             <version>0.0.1</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.herocheer</groupId>
+            <artifactId>herocheer-cache</artifactId>
+            <version>0.0.1</version>
+        </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>

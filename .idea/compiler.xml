@@ -7,6 +7,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="herocheer-order-api" />
+        <module name="herocheer-order-provider" />
+        <module name="herocheer-order-web" />
         <module name="herocheer-uac-api" />
         <module name="herocheer-uac-provider" />
         <module name="herocheer-uac-web" />
@@ -15,6 +18,9 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="herocheer-order-api" options="-parameters" />
+      <module name="herocheer-order-provider" options="-parameters" />
+      <module name="herocheer-order-web" options="-parameters" />
       <module name="herocheer-sports" options="-parameters" />
       <module name="herocheer-uac" options="-parameters" />
       <module name="herocheer-uac-api" options="-parameters" />
