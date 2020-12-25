@@ -30,6 +30,19 @@
             <artifactId>herocheer-cache</artifactId>
             <version>0.0.1</version>
         </dependency>
+
+        <!--seata-分布式事务管理-->
+        <dependency>
+            <groupId>io.seata</groupId>
+            <artifactId>seata-spring-boot-starter</artifactId>
+            <version>1.4.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.101tec</groupId>
+            <artifactId>zkclient</artifactId>
+            <version>0.11</version>
+        </dependency>
     </dependencies>
 
     <build>

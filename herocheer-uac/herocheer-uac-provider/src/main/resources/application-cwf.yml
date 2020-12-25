@@ -32,8 +32,27 @@ dubbo:
     loadbalance: roundrobin #负载均衡： 轮询
   registry:
     address: zookeeper://localhost:2181 #注册中心
-mybatis:
-  mapperLocations: classpath*:mapper/**/*.xml
+seata:
+  application-id: ${dubbo.application.name}
+  tx-service-group: seata_herocheer_tx_group
+  service:
+    vgroup-mapping:
+      seata_herocheer_tx_group: default
+#    grouplist:
+#      default: localhost:8091
+  registry:
+    type: zk
+    zk:
+      server-addr: localhost:2181
+      session-timeout: 10000
+      connect-timeout: 20000
+      cluster: default
+  config:
+    type: zk
+    zk:
+      server-addr: localhost:2181
+      session-timeout: 10000
+      connect-timeout: 20000
 
 
 

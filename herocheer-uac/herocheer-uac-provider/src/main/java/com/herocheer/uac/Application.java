@@ -1,10 +1,10 @@
 package com.herocheer.uac;
 
+import io.seata.spring.annotation.datasource.EnableAutoDataSourceProxy;
 import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
 
 /**
  * @author chenwf
@@ -12,6 +12,7 @@ import org.springframework.context.annotation.ComponentScan;
  */
 @SpringBootApplication(scanBasePackages = {"com.herocheer"})
 @MapperScan(basePackages = {"com.herocheer.uac.dao"})
+@EnableAutoDataSourceProxy
 @EnableDubbo
 public class Application {
     public static void main(String[] args) {

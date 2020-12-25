@@ -1,5 +1,6 @@
 package com.herocheer.order;
 
+import io.seata.spring.annotation.datasource.EnableAutoDataSourceProxy;
 import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -12,6 +13,7 @@ import org.springframework.context.annotation.ComponentScan;
  */
 @SpringBootApplication(scanBasePackages = {"com.herocheer"})
 @MapperScan(basePackages = {"com.herocheer.order.dao"})
+@EnableAutoDataSourceProxy
 @EnableDubbo
 public class Application {
     public static void main(String[] args) {
