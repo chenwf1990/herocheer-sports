@@ -1,0 +1,33 @@
+spring:
+  redis:
+    host: localhost
+    database: 3
+    port: 6379
+    password: chenwf
+    timeout: 5000ms
+dubbo:
+  application:
+    name: herocheer-uac-web
+    id: herocheer-uac-web
+  consumer:
+    timeout: 60000
+    retries: 0
+    check: false
+  service:
+      loadbalance: roundrobin
+  registry:
+      address: zookeeper://localhost:2181
+swagger:
+  title: uac模块
+  description: 用户模块
+  version: 1.0.0
+  termsOfServiceUrl: http://localhost:18081/
+  license:
+  licenseUrl:
+  basePackage: com.herocheer.uac.controller
+  contact:
+    name: chenwf
+    url: http://localhost:18081/
+    email: 349830964@qq.com
+
+

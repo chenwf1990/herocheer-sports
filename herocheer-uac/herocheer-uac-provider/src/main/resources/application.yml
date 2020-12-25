@@ -1,0 +1,7 @@
+server:
+  port: 18082
+spring:
+  profiles:
+    active: cwf
+mybatis:
+  mapperLocations: classpath*:mapper/**/*.xml
