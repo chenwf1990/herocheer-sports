@@ -24,6 +24,12 @@
             <artifactId>herocheer-uac-api</artifactId>
             <version>0.0.1</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.herocheer</groupId>
+            <artifactId>herocheer-cache</artifactId>
+            <version>0.0.1</version>
+        </dependency>
     </dependencies>
 
     <build>

@@ -1,5 +1,6 @@
 package com.herocheer.uac.service;
 
+import com.herocheer.cache.bean.RedisClient;
 import com.herocheer.common.exception.CommonException;
 import com.herocheer.uac.dao.TestDao;
 import com.herocheer.uac.domain.entity.Test;
@@ -18,6 +19,8 @@ import javax.annotation.Resource;
 public class TestServiceImpl implements TestService{
     @Resource
     private TestDao testDao;
+    @Resource
+    private RedisClient redisClient;
 
 
     @Override
@@ -28,11 +31,11 @@ public class TestServiceImpl implements TestService{
     @Override
     public Test getModel(Long id) {
         Test t = testDao.get(id);
-        t.setRemarks("123456");
+        String key = "333333333";
+        redisClient.set(key,"你是谁？我是谁？",10*1000);
+        t.setRemarks(redisClient.get(key));
         testDao.update(t);
-        t.setId(null);
-        t.setRemarks(System.currentTimeMillis()+"");
-        testDao.insert(t);
+//        testDao.insert(t);
 //        if(true){
 //            throw new CommonException("uac-provider异常");
 //        }

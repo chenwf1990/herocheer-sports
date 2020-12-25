@@ -9,7 +9,7 @@ import org.springframework.context.annotation.ComponentScan;
  * @author chenwf
  * @date 2020/12/17
  */
-@SpringBootApplication(scanBasePackages = {"com.herocheer.uac","com.herocheer.web"})
+@SpringBootApplication(scanBasePackages = {"com.herocheer"})
 @EnableDubbo
 public class Application {
     public static void main(String[] args) {
