@@ -14,7 +14,7 @@
           <if test="remarks != null">
            remarks = #{remarks},
           </if>
-          <include refid="com.herocheer.mybatis.base.BaseDao.update"></include>
+          <include refid="com.herocheer.mybatis.base.dao.CommonDao.update"></include>
       </trim>
       where id = #{id}
   </update>
@@ -25,22 +25,29 @@
   <if test="remarks != null">
   remarks,
   </if>
-   <include refid="com.herocheer.mybatis.base.BaseDao.inscolumn"></include>
+   <include refid="com.herocheer.mybatis.base.dao.CommonDao.inscolumn"></include>
   </trim>
   ) values (
   <trim suffixOverrides=",">
       <if test="remarks != null">
       #{remarks},
       </if>
-        <include refid="com.herocheer.mybatis.base.BaseDao.insparam"></include>
+        <include refid="com.herocheer.mybatis.base.dao.CommonDao.insparam"></include>
     </trim>
   )
 </insert>
 
-<select id="findByLimit" parameterType="map" resultType="com.herocheer.uac.domain.entity.Test">
-select * from test
-<where>
-  <include refid="com.herocheer.mybatis.base.BaseDao.condition"/>
-</where>
-</select>
+    <select id="findByLimit" parameterType="map" resultType="com.herocheer.uac.domain.entity.Test">
+    select * from test
+    <where>
+      <include refid="com.herocheer.mybatis.base.dao.CommonDao.condition"/>
+    </where>
+    </select>
+
+    <select id="listByPage" parameterType="map" resultType="com.herocheer.uac.domain.entity.Test">
+        select * from test
+        <!--<where>-->
+            <!--<include refid="com.herocheer.mybatis.base.dao.CommonDao.condition"/>-->
+        <!--</where>-->
+    </select>
 </mapper>

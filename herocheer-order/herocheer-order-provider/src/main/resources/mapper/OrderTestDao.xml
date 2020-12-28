@@ -11,7 +11,7 @@
           <if test="remarks != null">
            remarks = #{remarks},
           </if>
-          <include refid="com.herocheer.mybatis.base.BaseDao.update"></include>
+          <include refid="com.herocheer.mybatis.base.dao.CommonDao.update"></include>
       </trim>
       where id = #{id}
   </update>
@@ -22,14 +22,14 @@
   <if test="remarks != null">
   remarks,
   </if>
-   <include refid="com.herocheer.mybatis.base.BaseDao.inscolumn"></include>
+   <include refid="com.herocheer.mybatis.base.dao.CommonDao.inscolumn"></include>
   </trim>
   ) values (
   <trim suffixOverrides=",">
       <if test="remarks != null">
       #{remarks},
       </if>
-        <include refid="com.herocheer.mybatis.base.BaseDao.insparam"></include>
+        <include refid="com.herocheer.mybatis.base.dao.CommonDao.insparam"></include>
     </trim>
   )
 </insert>
@@ -37,7 +37,7 @@
 <select id="findByLimit" parameterType="map" resultType="com.herocheer.order.domain.entity.OrderTest">
 select * from order_test
 <where>
-  <include refid="com.herocheer.mybatis.base.BaseDao.condition"/>
+  <include refid="com.herocheer.mybatis.base.dao.CommonDao.condition"/>
 </where>
 </select>
 </mapper>

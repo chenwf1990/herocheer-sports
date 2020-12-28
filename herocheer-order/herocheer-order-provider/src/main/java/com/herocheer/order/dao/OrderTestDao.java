@@ -1,6 +1,6 @@
 package com.herocheer.order.dao;
 
-import com.herocheer.mybatis.base.BaseDao;
+import com.herocheer.mybatis.base.dao.BaseDao;
 import com.herocheer.order.domain.entity.OrderTest;
 
 /**

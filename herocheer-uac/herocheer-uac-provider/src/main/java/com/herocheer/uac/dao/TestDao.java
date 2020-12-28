@@ -1,7 +1,11 @@
 package com.herocheer.uac.dao;
 
-import com.herocheer.mybatis.base.BaseDao;
+import com.herocheer.common.base.page.Page;
+import com.herocheer.mybatis.base.dao.BaseDao;
 import com.herocheer.uac.domain.entity.Test;
+import com.herocheer.uac.domain.vo.TestVo;
+
+import java.util.List;
 
 /**
  * @author chenwf
@@ -12,4 +16,8 @@ import com.herocheer.uac.domain.entity.Test;
 public interface TestDao extends BaseDao<Test,Long> {
 
     Test findOne(Long id);
+
+    List<Test> listByPage(Page a);
+
+    List<Test> listByPage(TestVo testVo);
 }
