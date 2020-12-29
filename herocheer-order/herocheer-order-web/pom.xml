@@ -31,14 +31,8 @@
 
         <dependency>
             <groupId>com.herocheer</groupId>
-            <artifactId>herocheer-dubbo</artifactId>
+            <artifactId>herocheer-dubbo-client</artifactId>
             <version>0.0.1</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.herocheer</groupId>
-                    <artifactId>herocheer-dubbo-provider</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
 
         <dependency>

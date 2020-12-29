@@ -1,6 +1,6 @@
 package com.herocheer.uac.dao;
 
-import com.herocheer.common.base.page.Page;
+import com.herocheer.common.base.Page.Page;
 import com.herocheer.mybatis.base.dao.BaseDao;
 import com.herocheer.uac.domain.entity.Test;
 import com.herocheer.uac.domain.vo.TestVo;

@@ -15,7 +15,7 @@
     <dependencies>
         <dependency>
             <groupId>com.herocheer</groupId>
-            <artifactId>herocheer-dubbo</artifactId>
+            <artifactId>herocheer-dubbo-provider</artifactId>
             <version>0.0.1</version>
         </dependency>
 

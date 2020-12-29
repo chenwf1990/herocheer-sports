@@ -32,6 +32,7 @@ dubbo:
     loadbalance: roundrobin #负载均衡： 轮询
   registry:
     address: zookeeper://localhost:2181 #注册中心
+#    address: nacos://localhost:8848 #注册中心
 seata:
   application-id: ${dubbo.application.name}
   tx-service-group: seata_herocheer_tx_group
@@ -47,12 +48,23 @@ seata:
       session-timeout: 10000
       connect-timeout: 20000
       cluster: default
+    nacos:
+      server-addr: localhost:8848
+      cluster: default
+      username: nacos
+      password: nacos
+      namespace: seata
   config:
     type: zk
     zk:
       server-addr: localhost:2181
       session-timeout: 10000
       connect-timeout: 20000
+    nacos:
+      server-addr: localhost:8848
+      username: nacos
+      password: nacos
+      namespace: seata
 
 
 

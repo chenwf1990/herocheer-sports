@@ -1,7 +1,7 @@
 package com.herocheer.uac.service;
 
 import com.herocheer.cache.bean.RedisClient;
-import com.herocheer.common.base.page.Page;
+import com.herocheer.common.base.Page.Page;
 import com.herocheer.mybatis.base.service.BaseServiceImpl;
 import com.herocheer.order.service.OrderTestService;
 import com.herocheer.uac.dao.TestDao;

@@ -1,6 +1,6 @@
 package com.herocheer.uac.service;
 
-import com.herocheer.common.base.page.Page;
+import com.herocheer.common.base.Page.Page;
 import com.herocheer.common.base.service.BaseService;
 import com.herocheer.uac.domain.entity.Test;
 import com.herocheer.uac.domain.vo.TestVo;
